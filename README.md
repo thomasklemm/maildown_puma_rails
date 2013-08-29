@@ -1,3 +1,5 @@
+## Issue
+
 This is an example app for tracking down why [mail_view](Gem) (a way to preview emails in Rails visually) renders [Maildown]() templates always with the default maildown parser. This only happens when Puma is the app server, and does not happen with Thin.
 
 What does this mean:
@@ -19,3 +21,10 @@ Unexpected (using Puma): Renders with the default Kramdown renderer.
 ![Unexpected (Using Puma)](http://new.tinygrab.com/07ad86749082b340785f0a2e83ccf9980ebdfe77ca.png)
 
 Tests and actually sending emails respect the customized settings from the initializer as expected, so this issue only happens when previewing emails with Mailview.
+
+## Reproduce:
+
+- Clone the app
+- Start the Rails server
+- Visit 'http://localhost:3000/mail_view/hello'
+- The plain markdown text is expected to be rendered in the HTML view.

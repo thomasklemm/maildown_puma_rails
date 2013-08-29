@@ -1,10 +1,10 @@
 source 'https://rubygems.org'
 
 # Puma app server
-# gem 'puma', '2.5.1'
+gem 'puma', '2.5.1'
 
 # OR: Thin app server
-gem 'thin'
+# gem 'thin'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
